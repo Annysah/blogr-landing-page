@@ -1,0 +1,62 @@
+@import 'variables';
+@import 'media';
+
+.container-four {
+    margin-top: 100px;
+    font-family: $font-one;
+
+    img {
+        width: 100%;
+        padding: 0.5rem;
+
+        @include desktop {
+            width: 40vw;
+        }
+    }
+    
+    h3 {
+        font-size: 30px;
+        @extend %text-two;
+        padding: 0 2rem;
+    }
+
+    p {
+        text-align: center;
+        color: $very-gb;
+        font-size: 18px;
+        padding: 0.5rem 2rem;
+        line-height: 2;
+    }
+
+    .columns {
+        @include desktop {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-direction: row;
+            padding: 0 5rem;
+        }
+    }
+
+    .section-one {
+        @include desktop {
+            padding: 0 1rem;
+        }
+
+        h3 {
+            @include desktop {
+                text-align: left;
+            }
+        }
+
+        p {
+            @include desktop {
+                text-align: left;
+            }
+        }
+    }
+
+    .section-two {
+        @extend .section-one;
+    }
+}

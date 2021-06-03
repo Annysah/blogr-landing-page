@@ -1,0 +1,50 @@
+@import 'variables';
+@import 'media';
+ 
+.container-three {
+    color: $white;
+    background-color: $dark-gray;
+    text-align: center;
+    border-top-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+    margin-top: 200px;
+    //background-image: url('/images/bg-pattern-circles.svg');
+    
+    .column-two {
+        font-family: $font-one;
+        @include desktop {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-direction: row;
+            padding: 0 3rem;
+        }
+    }
+    
+    img {
+        width: 100%;
+        margin-top: -150px;
+
+        @include desktop {
+            width: 50vw;
+        }
+    }
+
+    h2 {
+        font-size: 40px;
+        font-weight: 400;
+    }
+
+    p {
+        font-weight: 100;
+        font-size: 17px;
+        line-height: 2;
+        padding: 0 2rem;
+        font-weight: lighter;
+        letter-spacing: 1.5px;
+    }
+
+    .contain-three {
+        padding-bottom: 2.5rem;
+    }
+}

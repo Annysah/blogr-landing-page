@@ -1,0 +1,155 @@
+@import 'variables';
+@import 'media';
+
+.nav {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-family: $font-one;
+    padding: 2rem 0;
+    max-width: 800px;
+
+    
+    &-links {
+        color: $white;
+        
+        @include desktop {
+            display: none;
+        }
+
+        .close-btn {
+            display: none;
+        }
+    
+    }
+
+    &-menu {
+        display: none;
+        position: absolute;
+        top: 80px;
+        left: 10%;
+        width: 280px;
+        height: 400px;
+        text-align: center;
+        font-family: $font-one;
+        background-color: $white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        
+        @include desktop {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 0;
+            color: $white;
+            
+        }
+    }
+
+    &-menu-links {
+        line-height: 5;
+        text-decoration: none;
+        display: block;
+        cursor: pointer;
+        color: $very-db;
+        font-weight: bold;
+
+        @include desktop {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            color: $white;
+            margin-right: 30px;
+        }
+    }
+
+    &-menu-lin {
+        text-decoration: none;
+        display: block;
+        cursor: pointer;
+        color: $white;
+
+        @include desktop {
+            color: $light-red;
+            //margin-left: 20px;
+        }
+    }
+
+    &-dropdown {
+        @include desktop {
+            display: flex;
+        }
+    }
+}
+
+
+.dropdown {
+    position: relative;
+    display: block;
+}
+
+.bxs-chevron-down {
+    color: $light-red;
+
+    @include desktop {
+        color: $white;
+    }
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    left: 10%;
+    background-color: #f1f1f1;
+    width: 220px;
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+
+    a {
+        color: $dark-des;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+}
+
+.dropdown-content a:hover {
+    font-weight: 600;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .nav-menu-links {
+    border-bottom: 2px solid $white;
+}
+
+hr {
+    width: 240px;
+    opacity: .2;
+}
+
+.btn-1 {
+    padding: 12px 30px;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    color: $white;
+    background: linear-gradient(45deg, $very-light-mobile, $light-red);
+    
+    @include desktop {
+        padding: 10px 40px;
+        background: $white;
+        font-size: 14px;
+        font-weight: 600;
+        //color: $light-red;
+    }
+
+    
+}
+

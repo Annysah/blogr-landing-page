@@ -1,0 +1,17 @@
+@import 'nav';
+@import 'container-one';
+@import 'container-two';
+@import 'container-three';
+@import 'container-four';
+@import 'footer';
+
+body {
+    @include desktop {
+        overflow-x: hidden;
+    }
+}
+
+.wrapper {
+    border-radius: 0 0 0 150px;
+    background: linear-gradient(90deg, $very-light-mobile, $light-red);
+}
